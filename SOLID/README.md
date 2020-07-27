@@ -39,3 +39,36 @@ public class SavingAccount : BankAccount
 ```
 
 What we have done is making the `BankAccount` class abstract and then make two concrete classes `CheckingAccount` and `SavingAccount` so that we can isolate the methods that were causing the object to have more than one reason to change.
+
+Let's look at another example - `Active Record Pattern`. This pattern violates SRP since a domain entity handles the persistence of its information which is clearly two responsibilities.
+
+```csharp
+
+[ActiveRecord]
+public class User : ActiveRecordBase<User>
+{
+    public User() {}
+
+    public User(string username, string password)
+    {
+        this.Username = username;
+        this.Password = password;
+    }
+
+    [PrimaryKey]
+    public int Id { get; set; }
+
+    [Property]
+    public string Username { get; set; }
+
+    [Property]
+    public string Password { get; set; }
+}
+
+```
+
+As we can see we define attributes to denote how properties map to columns in database table. To save the `User` we will take an instance of it and call `user.Save()`.
+
+![ActiveRecordExample](Resources/ActiveRecordExample.png)
+
+We can get rid of this limitation with this design. So what it boils down to is that the user class knows nothing on how it is persisted to the database.
