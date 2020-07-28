@@ -1,7 +1,12 @@
-# What is S.O.L.I.D.?
+### Table of Contents
+- [What is S.O.L.I.D.?](#what-is-solid)
+- [SRP: Single Responsibility Principle](#srp-single-responsibility-principle)
+  * [Why SRP is deemed so important?](#why-srp-is-deemed-so-important)
+
+### What is S.O.L.I.D.?
 > S.O.L.I.D. is a collection of best-practice, object-oriented design principles which can be applied to your design, allowing you to accomplish various desirable goals such as loose-coupling, higher maintainability, intuitive location of interesting code, etc.
 
-## SRP: Single Responsibility Principle
+### SRP: Single Responsibility Principle
 > "An object should have only one reason to change." In SRP, a reason to change is defined as a responsibility. If an object has more than one reason to change then it has more than one responsibility.
 
 Let's look at this example.
@@ -79,5 +84,5 @@ The main essence of this principle is that we should start to think small. It is
 3. Better testable and hence more robust.
 4. Maintainable and extensible.
 
-### Why SRP is deemed so important?
+#### Why SRP is deemed so important?
 If a class does more than one thing, and one functionality is "broken", it might be the case that the whole class becomes unusable. Also it doesn't make sense for one class to be handling different unrelated things together.
