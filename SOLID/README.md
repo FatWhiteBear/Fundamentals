@@ -72,3 +72,12 @@ As we can see we define attributes to denote how properties map to columns in da
 ![ActiveRecordExample](Resources/ActiveRecordExample.png)
 
 We can get rid of this limitation with this design. So what it boils down to is that the user class knows nothing on how it is persisted to the database.
+
+The main essence of this principle is that we should start to think small. It is much better to first divide a complex problem into smaller and easier sub-problems, and keep on dividing each sub-problem into "mini-problems" until it just has one task left. Code which maintains SRP is objectively better because:
+1. The code is more readable and hence, easier to understand.
+2. Less error prone since the "unit" is small.
+3. Better testable and hence more robust.
+4. Maintainable and extensible.
+
+### Why SRP is deemed so important?
+If a class does more than one thing, and one functionality is "broken", it might be the case that the whole class becomes unusable. Also it doesn't make sense for one class to be handling different unrelated things together.
