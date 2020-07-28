@@ -1,4 +1,7 @@
-# Design Patterns
+### Table of Contents
+- [Design Patterns](#design-patterns)
+
+### Design Patterns
 > Each pattern describes a problem which occurs over and over again in our environmentm and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.
 
 In general, a pattern has four essential elements.
